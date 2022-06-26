@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  justify-content: space-between;
+  width: 100%;
+  top: 8%;
+  left: 5%;
+  align-items: center;
+  hr {
+    width: 33%;
+    position: absolute;
+    right: 58%;
+    z-index: 11;
+    border: .1px solid hsl(0, 0%, 50%);
+  }
+  ul {
+    display: flex;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    width: 60vw;
+    height: 10rem;
+    padding-left: 12rem;
+    li {
+      a {
+        display: inline-block;
+        display: flex;
+        gap: 0.7rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
