@@ -1,8 +1,59 @@
+$color-primary: hsl(230, 35%, 7%);
+$color-secondary: hsl(231, 77%, 90%);
+$color-white: hsl(0, 0%, 100%);
 .home {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../public/assets/home/background-home-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding-top: 15rem;
+  display: flex;
+}
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: min(70vw, 150rem);
+  padding-block: 15rem;
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  width: min-content;
+  display: grid;
+  gap: 1rem;
+}
+.explore {
+  align-self: flex-end;
+  height: 25rem;
+  width: 25rem;
+  z-index: 5;
+  a {
+    color: $color-primary;
+    background-color: $color-white;
+    display: inline-block;
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: inherit;
+      background: #fff3;
+      z-index: -1;
+      transition: transform 150ms ease-in-out;
+      pointer-events: none;
+    }
+    &:hover::before {
+      transform: scale(1.4);
+    }
+  }
+}
+.text {
+  line-height: 1.6;
 }

@@ -1,6 +1,8 @@
 $bellefair: "Bellefair", serif;
 $barlow: "Barlow Condensed", sans-serif;
-
+$color-primary: hsl(230, 35%, 7%);
+$color-secondary: hsl(231, 77%, 90%);
+$color-white: hsl(0, 0%, 100%);
 html {
   font-size: 62.5%;
 }
@@ -9,7 +11,7 @@ body {
   margin: 0;
   font-size: 1.6rem;
   font-family: sans-serif;
-  background-color: black;
+  background-color: $color-primary;
 }
 li {
   list-style: none;
@@ -23,13 +25,23 @@ a {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: white;
+  color: $color-secondary;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-style: normal;
 }
 .Heading {
   font-family: $bellefair;
   text-transform: uppercase;
   &-1 {
     font-size: 15rem;
+    color: $color-white;
   }
   &-2 {
     font-size: 10rem;
@@ -42,7 +54,7 @@ a {
   }
   &-5 {
     font-family: $barlow;
-    font-size: 2, 8rem;
+    font-size: 2.8rem;
     letter-spacing: 4.75px;
   }
 }
